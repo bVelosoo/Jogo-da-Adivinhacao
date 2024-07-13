@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+body {
+  font-size: 1.6rem;
+  background: linear-gradient(
+    287deg,
+    rgba(194, 233, 251, 1) 0%,
+    rgb(63, 137, 255) 100%
+  );
+  background-size: 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.1);
+  width: min(43rem, 90%);
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  background-color: white;
+  border-radius: 0.6rem;
+  margin-top: -12rem;
+}
+h1 {
+  color: #34355b;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+p {
+  margin-top: 1.6rem;
+  color: rgba(52, 53, 91, 0.8);
+  line-height: 150%;
+}
+form {
+  display: flex;
+  justify-content: center;
+  margin-top: 4.8rem;
+}
+input {
+  border-radius: 0.6rem 0 0 0.6rem;
+  border: none;
+  outline: none;
+  background-color: #dce2e9;
+  padding: 1.6rem;
+  width: 4.8rem;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+button {
+  border-radius: 0 0.6rem 0.6rem 0;
+  border: none;
+  background-color: rgb(63, 137, 255);
+  color: white;
+  font-weight: bold;
+  padding: 1.6rem;
+  cursor: pointer;
+}
+.page-02 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-02 button {
+  border-radius: 0.6rem;
+  margin-top: 3.2rem;
+  width: 16rem;
+}
+.page-02 h2 {
+  font-weight: 400;
+}
+span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  font-weight: 700;
+  text-align: center;
+  background-color: rgba(233, 21, 21, 0.932);
+  color: rgba(255, 255, 255, 0.829);
+  animation: appear 1s;
+}
+@keyframes appear {
+  0% {
+    transform: translateY(-3rem);
+  }
+}
+.hide {
+  display: none;
+}

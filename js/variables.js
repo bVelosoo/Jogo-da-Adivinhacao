@@ -1,0 +1,7 @@
+export const page1 = document.querySelector(".page-01")
+export const page2 = document.querySelector(".page-02")
+export const inputNumber = document.querySelector(".page-01 #inputNumber")
+export const btnTry = document.querySelector(".page-01 .btnTry")
+export const messageResult = document.querySelector(".page-02 h2")
+export const tryAgain = document.querySelector(".page-02 button")
+export const alertError = document.querySelector("span")
