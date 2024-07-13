@@ -5,15 +5,20 @@
 }
 :root {
   font-size: 62.5%;
-  font-family: sans-serif;
+  --bg-gradient: linear-gradient(
+    287deg,
+    hsl(199, 88%, 87%) 0%,
+    hsl(217, 100%, 62%) 100%
+  );
+  --txt-color: hsl(238, 27%, 28%);
+  --bg-input: hsl(212, 23%, 89%);
+  --bg-button: hsl(217, 100%, 62%);
+  --white: hsl(0, 0%, 100%);
+  --bg-alert: hsla(0, 83%, 50%, 0.932);
 }
 body {
   font-size: 1.6rem;
-  background: linear-gradient(
-    287deg,
-    rgba(194, 233, 251, 1) 0%,
-    rgb(63, 137, 255) 100%
-  );
+  background: var(--bg-gradient);
   background-size: 400%;
   animation: gradient 15s ease infinite;
   height: 100vh;
@@ -33,6 +38,11 @@ body {
   }
 }
 
+body,
+button,
+input {
+  font-family: "Roboto", sans-serif;
+}
 main {
   display: flex;
   justify-content: center;
@@ -41,18 +51,18 @@ main {
   box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.1);
   width: min(43rem, 90%);
   padding: 4.8rem 6.4rem 6.4rem 6.4rem;
-  background-color: white;
+  background-color: var(--white);
   border-radius: 0.6rem;
   margin-top: -12rem;
 }
 h1 {
-  color: #34355b;
+  color: var(--txt-color);
   font-size: 2.4rem;
   font-weight: 600;
 }
 p {
   margin-top: 1.6rem;
-  color: rgba(52, 53, 91, 0.8);
+  color: var(--txt-color);
   line-height: 150%;
 }
 form {
@@ -64,7 +74,7 @@ input {
   border-radius: 0.6rem 0 0 0.6rem;
   border: none;
   outline: none;
-  background-color: #dce2e9;
+  background-color: var(--bg-input);
   padding: 1.6rem;
   width: 4.8rem;
 }
@@ -75,8 +85,8 @@ input::-webkit-inner-spin-button {
 button {
   border-radius: 0 0.6rem 0.6rem 0;
   border: none;
-  background-color: rgb(63, 137, 255);
-  color: white;
+  background-color: var(--bg-button);
+  color: var(--white);
   font-weight: bold;
   padding: 1.6rem;
   cursor: pointer;
@@ -102,8 +112,8 @@ span {
   padding: 1rem;
   font-weight: 700;
   text-align: center;
-  background-color: rgba(233, 21, 21, 0.932);
-  color: rgba(255, 255, 255, 0.829);
+  background-color: var(--bg-alert);
+  color: var(--bg-input);
   animation: appear 1s;
 }
 @keyframes appear {
